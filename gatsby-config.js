@@ -6,4 +6,27 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "CoinedOne Teachnologies",
+    description:
+      "Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+  },
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/img/logos/`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+  ],
 }
