@@ -1,1 +1,1 @@
-#Test site for CoinedOne company
+Test site for CoinedOne company
