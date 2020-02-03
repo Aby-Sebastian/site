@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import logo from "../img/Opnlogo.png"
 
 export default function header() {
@@ -18,9 +19,15 @@ export default function header() {
               </a>
             </div>
             <ul class="menu">
-              <li>Home</li>
-              <li>Service</li>
-              <li>Research</li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/service/">Service</Link>
+              </li>
+              <li>
+                <Link to="/research/">Research</Link>
+              </li>
               <li>Resource</li>
               <li>About Us</li>
               <li>Contact Us</li>
