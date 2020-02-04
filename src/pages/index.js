@@ -9,7 +9,7 @@ const IndexPage = () => {
       allImageSharp {
         edges {
           node {
-            resize {
+            fluid {
               src
             }
           }
@@ -36,8 +36,8 @@ const IndexPage = () => {
             <div class="row1 row">
               {images.map(image => (
                 <img
-                  src={image.node.resize.src}
-                  alt={image.node.resize.originalName}
+                  src={image.node.fluid.src}
+                  alt={image.node.fluid.originalName}
                   class="icons"
                 />
               ))}
