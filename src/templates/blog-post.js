@@ -14,7 +14,6 @@ export default function Template({ data }) {
         <h4>Posted by {post.frontmatter.title}</h4>
         <p>{post.frontmatter.description}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
       </div>
     </Layout>
   )
