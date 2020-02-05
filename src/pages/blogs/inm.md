@@ -1,4 +1,7 @@
 ---
+date: 3-2-2020
+path: /hello
+author: Aby
 title: Three
 description: It has survived not only five centuries,
 ---
