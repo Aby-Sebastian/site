@@ -25,7 +25,7 @@ export default research
 
 export const query = graphql`
   {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       edges {
         node {
           frontmatter {
