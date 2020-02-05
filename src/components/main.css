@@ -50,7 +50,7 @@ ul > * {
   list-style-type: none;
 }
 .imagediv {
-  margin: 2em;
+  /* margin: 2em; */
   width: 100%;
   height: 100%;
   top: 0;
