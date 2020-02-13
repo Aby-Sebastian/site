@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import logo from "../img/Opnlogo.png"
 
-export default function header() {
+export default function header({ menuLinks }) {
   return (
     <>
       <div class="skip">Skip to Main Content</div>
@@ -19,7 +19,21 @@ export default function header() {
               </a>
             </div>
             <ul class="menu">
-              <li>
+              {menuLinks.map(link => (
+                <li
+                  key={link.name}
+                  style={{
+                    listStyleType: `none`,
+                    padding: `1rem`,
+                  }}
+                >
+                  <Link style={{ color: `white` }} to={link.link}>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+              {/* Original menu and links are stored in config file metadata section */}
+              {/* <li>
                 <Link to="/">Home</Link>
               </li>
               <li>
@@ -30,7 +44,7 @@ export default function header() {
               </li>
               <li>Resource</li>
               <li>About Us</li>
-              <li>Contact Us</li>
+              <li>Contact Us</li> */}
             </ul>
           </nav>
         </header>
