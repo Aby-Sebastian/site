@@ -8,6 +8,11 @@ export default function Template({ data }) {
   return (
     <Layout>
       <div className="container">
+        <div className="breadCrumb">
+          <Link to="/">Home</Link> > <Link to="/research/">Research</Link> >{" "}
+          {post.frontmatter.title}{" "}
+        </div>
+        <br />
         <Link to="/research/">Go back</Link>
         <hr />
         <h1>{post.frontmatter.title}</h1>
@@ -23,6 +28,7 @@ export const postQuery = graphql`
   query BlogPostByPath($title: String!) {
     markdownRemark(frontmatter: { title: { eq: $title } }) {
       html
+
       frontmatter {
         title
         description
