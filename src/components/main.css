@@ -17,6 +17,15 @@
 .breadCrumb a:hover {
   color: white;
 }
+
+.prevnext {
+  display: flex;
+  justify-content: space-between;
+}
+.prevnext a {
+  color: white;
+}
+
 body {
   margin: 12vh;
 }
