@@ -6,7 +6,9 @@ function research({ data }) {
   return (
     <Layout>
       <div className="container">
-        Research
+        <div className="breadCrumb">
+          <Link to="/">Home</Link> > Research
+        </div>
         <br />
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <>
