@@ -13,7 +13,7 @@ function research({ data }) {
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <>
             <h1>
-              <Link to={node.frontmatter.title}>{node.frontmatter.title}</Link>
+              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
             </h1>
             <div>{node.frontmatter.description}</div>
           </>
@@ -30,6 +30,9 @@ export const query = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
             description
