@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
 
-function research({ data }) {
+const Research = () => {
   return (
     <Layout>
       <div className="container">
@@ -10,37 +10,10 @@ function research({ data }) {
           <Link to="/">Home</Link> > Research
         </div>
         <br />
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <>
-            <h1>
-              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-            </h1>
-            <div>{node.frontmatter.description}</div>
-          </>
-        ))}
+        Research
       </div>
     </Layout>
   )
 }
 
-export default research
-
-export const query = graphql`
-  {
-    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            description
-          }
-          excerpt
-          fileAbsolutePath
-        }
-      }
-    }
-  }
-`
+export default Research

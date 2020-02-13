@@ -20,11 +20,11 @@ export default function Template({ data, pageContext }) {
     <Layout>
       <div className="container">
         <div className="breadCrumb">
-          <Link to="/">Home</Link> > <Link to="/research/">Research</Link> >{" "}
+          <Link to="/">Home</Link> > <Link to="/articles/">Articles</Link> >{" "}
           {post.frontmatter.title}{" "}
         </div>
         <br />
-        <Link to="/research/">Go back</Link>
+        <Link to="/articles/">Go back</Link>
 
         <hr />
         <h1>{post.frontmatter.title}</h1>
