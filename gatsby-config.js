@@ -10,6 +10,32 @@ module.exports = {
     title: "CoinedOne Teachnologies",
     description:
       "Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
+    menuLinks: [
+      {
+        name: "Home",
+        link: "/",
+      },
+      {
+        name: "Articles",
+        link: "/articles",
+      },
+      {
+        name: "Research",
+        link: "/research",
+      },
+      {
+        name: "Resource",
+        link: "/",
+      },
+      {
+        name: "About Us",
+        link: "/",
+      },
+      {
+        name: "Contact Us",
+        link: "/",
+      },
+    ],
   },
   plugins: [
     {
