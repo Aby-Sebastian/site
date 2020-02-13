@@ -11,7 +11,12 @@
 .imagediv > div > img {
   padding: 10px;
 }
-
+.breadCrumb a {
+  color: white;
+}
+.breadCrumb a:hover {
+  color: white;
+}
 body {
   margin: 12vh;
 }
