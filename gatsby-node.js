@@ -32,16 +32,36 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  const articles = result.data.allMarkdownRemark.edges
-  articles.forEach(({ node }, index) => {
+
+  const posts = result.data.allMarkdownRemark.edges
+
+  //create blog posts page
+  posts.forEach(({ node }, index) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/blog-post.js`),
       context: {
-        prev: index === 0 ? null : articles[index - 1].node,
-        next: index === articles.length - 1 ? null : articles[index + 1].node,
+        prev: index === 0 ? null : posts[index - 1].node,
+        next: index === posts.length - 1 ? null : posts[index + 1].node,
         title: node.frontmatter.title,
         slug: node.fields.slug,
+      },
+    })
+  })
+
+  //creates blog listing page
+  const postsPerPage = 2
+  const numPages = Math.ceil(posts.length / postsPerPage)
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/` : `/${i + 1}`,
+      component: path.resolve("./src/templates/blog-lists.js"),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
       },
     })
   })
