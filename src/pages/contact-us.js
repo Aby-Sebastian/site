@@ -40,7 +40,7 @@ const Contact = class extends React.Component {
           <div className="container">
             <p>Hello Contacts</p>
             <form
-              name="contact"
+              name="Contact-Us"
               method="post"
               action="/"
               data-netlify="true"
