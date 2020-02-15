@@ -31,20 +31,24 @@ export default function Template({ data, pageContext }) {
         <h4>Posted by {post.frontmatter.title}</h4>
         <p>{post.frontmatter.description}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <div className="prevnext">
-          {prev && (
-            <Link to={prev.url}>
-              <span>Previous</span>
-              <h3>{prev.title}</h3>
-            </Link>
-          )}
-          {next && (
-            <Link to={next.url}>
-              <span>Next</span>
-              <h3>{next.title}</h3>
-            </Link>
-          )}
-        </div>
+        <ul className="prevnext pager">
+          <li className="previous">
+            {prev && (
+              <Link to={prev.url}>
+                <span>Previous</span>
+                <h3>{prev.title}</h3>
+              </Link>
+            )}
+          </li>
+          <li className="next">
+            {next && (
+              <Link to={next.url}>
+                <span>Next</span>
+                <h3>{next.title}</h3>
+              </Link>
+            )}
+          </li>
+        </ul>
       </div>
     </Layout>
   )
