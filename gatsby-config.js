@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         name: "Contact Us",
-        link: "/",
+        link: "/contact-us",
       },
     ],
   },
