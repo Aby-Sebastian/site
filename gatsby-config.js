@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         name: "Resource",
-        link: "/",
+        link: "/resource",
       },
       {
         // name: "About Us",
