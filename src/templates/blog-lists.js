@@ -11,8 +11,10 @@ class BlogIndex extends React.Component {
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
     const prevPage =
-      currentPage - 1 === 1 ? "/articles" : (currentPage - 1).toString()
-    const nextPage = (currentPage + 1).toString()
+      currentPage - 1 === 1
+        ? "/articles"
+        : "/articles/" + (currentPage - 1).toString()
+    const nextPage = "/articles/" + (currentPage + 1).toString()
 
     return (
       <Layout>
@@ -54,7 +56,7 @@ class BlogIndex extends React.Component {
                 }}
               >
                 <Link
-                  to={`/${i === 0 ? "articles" : i + 1}`}
+                  to={`/${i === 0 ? "articles" : "articles/" + (i + 1)}`}
                   style={{
                     textDecoration: "none",
                     color: i + 1 === currentPage ? "#ffffff" : "",
