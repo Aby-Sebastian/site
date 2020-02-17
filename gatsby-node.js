@@ -49,7 +49,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  //creates blog listing page
+  //creates blog listing page 
   const postsPerPage = 2
   const numPages = Math.ceil(posts.length / postsPerPage)
 
