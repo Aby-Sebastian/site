@@ -1,5 +1,5 @@
 ---
-date: 17-2-2020
+date: 27/02/2020
 path: /lorem
 author: Lorem
 title: Sixth

@@ -1,5 +1,5 @@
 ---
-date: 2-2-2020
+date: 02/02/2020
 path: /hello
 author: Aby
 title: Two
