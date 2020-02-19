@@ -67,7 +67,33 @@ export default function Template({ data, pageContext }) {
                   className="twitter"
                   target="_blank"
                 >
-                  <i className="fab fa-facebook-f fa-2x" />
+                  <i className="fab fa-twitter-f fa-2x" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={
+                    "https://www.plus.google.com/share?url=" +
+                    baseUrl +
+                    pageContext.slug
+                  }
+                  className="google"
+                  target="_blank"
+                >
+                  <i className="fab fa-google-f fa-2x" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={
+                    "https://www.linkedin.com/shareArticle?url=" +
+                    baseUrl +
+                    pageContext.slug
+                  }
+                  className="linkedin"
+                  target="_blank"
+                >
+                  <i className="fab fa-linkedin-f fa-2x" />
                 </a>
               </li>
             </ul>
