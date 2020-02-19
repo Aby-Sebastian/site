@@ -67,7 +67,7 @@ export default function Template({ data, pageContext }) {
                   className="twitter"
                   target="_blank"
                 >
-                  <i className="fab fa-twitter-f fa-2x" />
+                  <i className="fab fa-twitter fa-2x" />
                 </a>
               </li>
               <li>
@@ -80,7 +80,7 @@ export default function Template({ data, pageContext }) {
                   className="google"
                   target="_blank"
                 >
-                  <i className="fab fa-google-f fa-2x" />
+                  <i className="fab fa-google fa-2x" />
                 </a>
               </li>
               <li>
@@ -93,7 +93,7 @@ export default function Template({ data, pageContext }) {
                   className="linkedin"
                   target="_blank"
                 >
-                  <i className="fab fa-linkedin-f fa-2x" />
+                  <i className="fab fa-linkedin fa-2x" />
                 </a>
               </li>
             </ul>
