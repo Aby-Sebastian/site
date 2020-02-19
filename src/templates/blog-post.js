@@ -49,6 +49,7 @@ export default function Template({ data, pageContext }) {
                   }
                   className="facebook"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fab fa-facebook-f fa-2x" />
                 </a>
@@ -66,6 +67,7 @@ export default function Template({ data, pageContext }) {
                   }
                   className="twitter"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fab fa-twitter fa-2x" />
                 </a>
@@ -79,6 +81,7 @@ export default function Template({ data, pageContext }) {
                   }
                   className="google"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fab fa-google fa-2x" />
                 </a>
@@ -92,6 +95,7 @@ export default function Template({ data, pageContext }) {
                   }
                   className="linkedin"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fab fa-linkedin fa-2x" />
                 </a>
