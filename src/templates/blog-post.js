@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 
 export default function Template({ data, pageContext }) {
   const post = data.markdownRemark
+  const baseUrl = "https://infallible-cori-68e745.netlify.com"
   const prev = pageContext.prev //from here
     ? {
         url: `${pageContext.prev.fields.slug}`,
@@ -18,6 +19,10 @@ export default function Template({ data, pageContext }) {
     : null //above code creates next and previous nav links
   return (
     <Layout>
+      <link
+        rel="stylesheet"
+        href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
+      ></link>
       <div className="container">
         <div className="breadCrumb">
           <Link to="/">Home</Link> > <Link to="/articles/">Articles</Link> >{" "}
@@ -31,6 +36,26 @@ export default function Template({ data, pageContext }) {
         <h4>Posted by {post.frontmatter.title}</h4>
         <p>{post.frontmatter.description}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="share-post">
+          Share this Post
+          <div className="share-post social-media-links">
+            <ul>
+              <li>
+                <a
+                  href={
+                    "https://www.facebook.com/sharer/sharer.php?u=" +
+                    baseUrl +
+                    pageContext.slug
+                  }
+                  className="facebook"
+                  target="_blank"
+                >
+                  <i className="fab fa-facebook-f fa-2x" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <ul className="prevnext pager">
           <li className="previous">
             {prev && (
