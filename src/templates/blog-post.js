@@ -53,6 +53,23 @@ export default function Template({ data, pageContext }) {
                   <i className="fab fa-facebook-f fa-2x" />
                 </a>
               </li>
+              <li>
+                <a
+                  href={
+                    "https://www.twitter.com/share?url=" +
+                    baseUrl +
+                    pageContext.slug +
+                    "&text=" +
+                    post.frontmatter.title +
+                    "&via" +
+                    "twitterHandle"
+                  }
+                  className="twitter"
+                  target="_blank"
+                >
+                  <i className="fab fa-facebook-f fa-2x" />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
