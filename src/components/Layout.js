@@ -29,7 +29,28 @@ const Layout = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-        
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={title} />
+        <meta
+          property="og:url"
+          content="https://infallible-cori-68e745.netlify.com/"
+        />
+
+        <meta
+          property="og:image"
+          content={`${withPrefix("/")}img/Opnlogo.png`}
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content="from twitter description" />
+        <meta
+          name="twitter:url"
+          content="https://infallible-cori-68e745.netlify.com/articles/n/"
+        />
+        <meta
+          name="twitter:image"
+          content={`${withPrefix("/")}img/Opnlogo.png`}
+        />
       </Helmet>
       <div className="bg-color">
         <Header menuLinks={data.site.siteMetadata.menuLinks} />
