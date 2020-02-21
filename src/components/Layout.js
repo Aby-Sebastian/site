@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
         <meta name="twitter:description" content="from twitter description" />
         <meta
           name="twitter:image"
-          content={`${withPrefix("/")}img/Opnlogo.png`}
+          content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg"
         />
       </Helmet>
       <div className="bg-color">
