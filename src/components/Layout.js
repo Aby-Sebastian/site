@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
-        <meta name="description" content={description} />
+        <meta name="description" content="you there" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />
         <meta
