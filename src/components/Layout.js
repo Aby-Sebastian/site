@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
           property="og:image"
           content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg"
         />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:url"
           content="https://infallible-cori-68e745.netlify.com/ "
