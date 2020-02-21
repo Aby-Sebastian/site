@@ -40,17 +40,22 @@ const Layout = ({ children }) => {
           property="og:image"
           content={`${withPrefix("/")}img/Opnlogo.png`}
         />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content="from twitter description" />
         <meta
-          name="twitter:url"
-          content="https://infallible-cori-68e745.netlify.com/articles/n/"
+          data-rh="true"
+          name="twitter:image:src"
+          content="https://miro.medium.com/max/1200/1*qpUWqfJQSuTO-Bc4DuHBcw.jpeg"
         />
         <meta
-          name="twitter:image"
-          content={`${withPrefix("/")}img/Opnlogo.png`}
+          data-rh="true"
+          name="twitter:card"
+          content="summary_large_image"
         />
+        <meta
+          data-rh="true"
+          property="article:author"
+          content="https://medium.com/@fasterpancakes"
+        />
+        <meta data-rh="true" name="twitter:creator" content="@fasterpancakes" />
       </Helmet>
       <div className="bg-color">
         <Header menuLinks={data.site.siteMetadata.menuLinks} />
