@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
           content="https://infallible-cori-68e745.netlify.com/ "
         />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        <meta name="twitter:description" content="from twitter description" />
         <meta
           name="twitter:image"
           content={`${withPrefix("/")}img/Opnlogo.png`}
