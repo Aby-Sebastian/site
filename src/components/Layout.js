@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
         <meta name="twitter:description" content="from twitter description" />
         <meta
           name="twitter:url"
-          content="https://infallible-cori-68e745.netlify.com/ "
+          content="https://infallible-cori-68e745.netlify.com/articles/n/"
         />
         <meta
           name="twitter:image"
