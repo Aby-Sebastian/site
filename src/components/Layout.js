@@ -38,18 +38,18 @@ const Layout = ({ children }) => {
 
         <meta
           property="og:image"
-          content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg"
+          content={`${withPrefix("/")}img/Opnlogo.png`}
         />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content="from twitter description" />
         <meta
           name="twitter:url"
           content="https://infallible-cori-68e745.netlify.com/ "
         />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content="from twitter description" />
         <meta
           name="twitter:image"
-          content="https://www.freecodecamp.org/news/content/images/2020/02/javascript-with-laptop-code-1.jpg"
+          content={`${withPrefix("/")}img/Opnlogo.png`}
         />
       </Helmet>
       <div className="bg-color">
