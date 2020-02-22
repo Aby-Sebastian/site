@@ -17,7 +17,9 @@
 .breadCrumb a:hover {
   color: white;
 }
-
+.important {
+  margin-top: 15rem;
+}
 .prevnext {
   display: flex;
   justify-content: space-between;

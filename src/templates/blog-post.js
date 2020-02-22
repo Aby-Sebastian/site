@@ -23,7 +23,7 @@ export default function Template({ data, pageContext }) {
         rel="stylesheet"
         href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
       ></link>
-      <div className="container">
+      <div className="container important">
         <div className="breadCrumb">
           <Link to="/">Home</Link> > <Link to="/articles/">Articles</Link> >{" "}
           {post.frontmatter.title}{" "}
@@ -33,8 +33,8 @@ export default function Template({ data, pageContext }) {
 
         <hr />
         <h1>{post.frontmatter.title}</h1>
-        <h4>Posted by {post.frontmatter.title}</h4>
-        <p>{post.frontmatter.description}</p>
+        <h4>Posted by {post.frontmatter.author}</h4>
+        {/* <p>{post.frontmatter.description}</p> */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <div className="share-post">
           Share this Post
@@ -134,6 +134,7 @@ export const postQuery = graphql`
       frontmatter {
         title
         description
+        author
       }
     }
   }

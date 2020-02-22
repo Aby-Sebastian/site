@@ -18,7 +18,11 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout>
-        <div className="container">
+        <div className="container important">
+          <div className="breadCrumb">
+            <Link to="/">Home</Link> > Articles
+          </div>
+          <br />
           <div className="nav-list">
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
@@ -30,7 +34,8 @@ class BlogIndex extends React.Component {
                     </Link>
                   </h3>
                   <small>{node.frontmatter.date}</small>
-                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                  <p>{node.frontmatter.description}</p>
+                  {/* <p dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
                 </div>
               )
             })}
@@ -104,6 +109,7 @@ export const pageQuery = graphql`
           frontmatter {
             date
             title
+            description
           }
         }
       }
