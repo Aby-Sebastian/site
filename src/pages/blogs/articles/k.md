@@ -4,6 +4,7 @@ path: /lorem
 author: Lorem
 title: Fifth
 description: This is Fifth
+tags: ["animals", "Chicago", "zoos"]
 ---
 
 Anim consequat adipisicing Lorem anim eiusmod id ea quis reprehenderit esse elit. Nisi excepteur officia sit in in veniam minim enim. Ut voluptate sint occaecat irure tempor sunt aute ex consectetur. Mollit elit aute exercitation nulla labore commodo. Ipsum fugiat fugiat esse minim incididunt magna mollit. Laboris culpa deserunt ex quis. Nulla quis nisi irure enim laborum proident.

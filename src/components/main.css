@@ -20,6 +20,10 @@
 .important {
   margin-top: 15rem;
 }
+.social-media-links > ul {
+  display: flex;
+  justify-content: center;
+}
 .prevnext {
   display: flex;
   justify-content: space-between;
