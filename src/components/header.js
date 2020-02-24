@@ -14,7 +14,7 @@ export default function header({ menuLinks }) {
 
           <nav className="mainmenu col-md-8 col-lg-8 col-xs-12">
             <div className="bars" alt="click to open menu">
-              <a href="#">
+              <a href="/">
                 <i className="fa fa-bars"></i>
               </a>
             </div>

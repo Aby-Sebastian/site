@@ -84,7 +84,7 @@ const FooterPage = class extends React.Component {
         <footer>
           <div className="foot">
             © 2020 CoinedOne All rights reserved.{" "}
-            <a href="#">Privacy Policy.</a>
+            <a href="/">Privacy Policy.</a>
           </div>
         </footer>
       </div>
