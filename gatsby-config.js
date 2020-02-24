@@ -29,8 +29,8 @@ module.exports = {
       },
       {
         // name: "About Us",
-        name: "Blogs",
-        link: "/",
+        name: "Tags",
+        link: "/tags",
       },
       {
         name: "Contact Us",
