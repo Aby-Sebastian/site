@@ -5,20 +5,20 @@ import logo from "../img/Opnlogo.png"
 export default function header({ menuLinks }) {
   return (
     <>
-      <div class="skip">Skip to Main Content</div>
-      <div class="container">
-        <header class="row">
-          <div class="picon col-md-4 col-lg-4 col-xs-12">
+      <div className="skip">Skip to Main Content</div>
+      <div className="container">
+        <header className="row">
+          <div className="picon col-md-4 col-lg-4 col-xs-12">
             <img src={logo} alt="Logo" height="90em" width="90em" /> CoinedOne
           </div>
 
-          <nav class="mainmenu col-md-8 col-lg-8 col-xs-12">
-            <div class="bars" alt="click to open menu">
-              <a href="javascript:void(0);">
-                <i class="fa fa-bars"></i>
+          <nav className="mainmenu col-md-8 col-lg-8 col-xs-12">
+            <div className="bars" alt="click to open menu">
+              <a href="#">
+                <i className="fa fa-bars"></i>
               </a>
             </div>
-            <ul class="menu">
+            <ul className="menu">
               {menuLinks.map(link => (
                 <li
                   key={link.name}

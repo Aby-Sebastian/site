@@ -35,12 +35,12 @@ const FooterPage = class extends React.Component {
   render() {
     return (
       <div className="container">
-        <section class="newsletter row">
-          <span class="desc col-md-5 col-lg-5">
+        <section className="newsletter row">
+          <span className="desc col-md-5 col-lg-5">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,
             nemo perferendis.
           </span>
-          <span class="sign col-md-5 col-lg-5">
+          <span className="sign col-md-5 col-lg-5">
             <form
               name="Newsletter"
               method="post"
@@ -82,7 +82,7 @@ const FooterPage = class extends React.Component {
           </span>
         </section>
         <footer>
-          <div class="foot">
+          <div className="foot">
             © 2020 CoinedOne All rights reserved.{" "}
             <a href="#">Privacy Policy.</a>
           </div>
