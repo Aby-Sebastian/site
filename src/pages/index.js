@@ -11,6 +11,7 @@ const IndexPage = () => {
           node {
             fluid {
               src
+              originalName
             }
           }
         }
