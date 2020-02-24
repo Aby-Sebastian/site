@@ -35,10 +35,11 @@ const IndexPage = () => {
         <section>
           <div className="imagediv">
             <div className="row1 row">
-              {images.map(image => (
+              {images.map((image, key) => (
                 <img
                   src={image.node.fluid.src}
                   alt={image.node.fluid.originalName}
+                  key={key}
                   className="icons"
                 />
               ))}
