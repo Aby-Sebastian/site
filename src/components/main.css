@@ -11,6 +11,7 @@
 
 .taglist ul {
   display: flex;
+  flex-wrap: wrap;
 }
 .imagediv > div > img {
   padding: 10px;
@@ -40,7 +41,6 @@ body {
   margin: 12vh;
 }
 a:hover {
-  font-size: 1.15em;
   text-decoration: none;
 }
 .smallfonts {
@@ -68,6 +68,9 @@ header {
 } */
 nav > ul {
   display: flex;
+}
+.blog-post a {
+  color: white;
 }
 ul > * {
   padding: 1em;
@@ -119,6 +122,9 @@ header a:hover {
 }
 .topmargin {
   margin-top: 12vh;
+}
+li > a {
+  color: white;
 }
 .topmargin > a {
   font-size: 1.5em;

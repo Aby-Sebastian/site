@@ -23,11 +23,11 @@ class BlogIndex extends React.Component {
             <Link to="/">Home</Link> > Articles
           </div>
           <br />
-          <div className="nav-list">
+          <div className="blog-list">
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               return (
-                <div key={node.fields.slug}>
+                <div key={node.fields.slug} className="blog-post">
                   <h3>
                     <Link style={{ boxShadow: "none" }} to={node.fields.slug}>
                       {title}

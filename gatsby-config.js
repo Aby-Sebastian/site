@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "CoinedOne Teachnologies",
+    title: "CoinedOne Technologies",
     description:
       "Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
     menuLinks: [
