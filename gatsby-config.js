@@ -40,6 +40,10 @@ module.exports = {
         name: "Contact Us",
         link: "/contact-us",
       },
+      {
+        name: "Search",
+        link: "/search",
+      },
     ],
   },
   plugins: [

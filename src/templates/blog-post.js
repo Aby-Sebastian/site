@@ -31,10 +31,11 @@ export default function Template({ data, pageContext }) {
         </div>
         <br />
         <Link to="/articles/">Go back</Link>
-
         <hr />
         <h1>{post.frontmatter.title}</h1>
-        <h4>Posted by {post.frontmatter.author}</h4>
+        <h5>
+          Posted by {post.frontmatter.author} On {post.frontmatter.date}
+        </h5>{" "}
         {/* <p>{post.frontmatter.description}</p> */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <div className="taglist">
@@ -132,6 +133,7 @@ export const postQuery = graphql`
         title
         description
         author
+        date
         tags
       }
     }
