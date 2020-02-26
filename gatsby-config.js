@@ -20,7 +20,7 @@ module.exports = {
         link: "/articles",
       },
       {
-        name: "Research",
+        name: "News",
         link: "/research",
       },
       {
@@ -31,6 +31,10 @@ module.exports = {
         // name: "About Us",
         name: "Tags",
         link: "/tags",
+      },
+      {
+        name: "About Us",
+        link: "/about",
       },
       {
         name: "Contact Us",

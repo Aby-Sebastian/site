@@ -20,8 +20,8 @@ const TagsPage = ({
   <Layout>
     <div className="container">
       <Helmet title={title} />
-      <div>
-        <h1>Tags</h1>
+      <h1>Tags</h1>
+      <div className="taglist">
         <ul>
           {group.map(tag => (
             <li key={tag.fieldValue}>

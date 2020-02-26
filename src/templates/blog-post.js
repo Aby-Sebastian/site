@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { kebabCase } from "lodash"
 import Layout from "../components/Layout"
 
 export default function Template({ data, pageContext }) {
@@ -36,6 +37,16 @@ export default function Template({ data, pageContext }) {
         <h4>Posted by {post.frontmatter.author}</h4>
         {/* <p>{post.frontmatter.description}</p> */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="taglist">
+          <h4>Tags</h4>
+          <ul>
+            {post.frontmatter.tags.map(tag => (
+              <li key={tag + `tag`}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className="share-post">
           Share this Post
           <div className="share-post social-media-links">
@@ -121,6 +132,7 @@ export const postQuery = graphql`
         title
         description
         author
+        tags
       }
     }
   }
