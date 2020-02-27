@@ -39,9 +39,12 @@ const Layout = ({ children }) => {
           property="og:description"
           content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling."
         />
-        <meta property="og:image" content={`${withPrefix("/")}img/logo.webp`} />
+        <meta
+          property="og:image"
+          content={`${withPrefix("/")}img/twitter.png`}
+        />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={title} />
+        <meta name="twitter:title" content="21 VS code shortcuts" />
         <meta name="twitter:creator" content="@nickbilton" />
         <meta name="twitter:description" content="from twitter description" />
         <meta
@@ -50,7 +53,7 @@ const Layout = ({ children }) => {
         />
         <meta
           name="twitter:image"
-          content={`${withPrefix("/")}img/Opnlogo.png`}
+          content={`${withPrefix("/")}img/twitter.png`}
         />
       </Helmet>
       <div className="bg-color">
