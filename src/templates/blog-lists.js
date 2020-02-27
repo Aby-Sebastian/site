@@ -27,14 +27,24 @@ class BlogIndex extends React.Component {
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               return (
-                <div key={node.fields.slug} className="blog-post">
-                  <h3>
+                <div
+                  key={node.fields.slug}
+                  className="blog-post row"
+                  style={{
+                    marginBottom: "10rem",
+                  }}
+                >
+                  <div className="col-md-3">{node.frontmatter.date}</div>
+                  <div className="col-md-6">
                     <Link style={{ boxShadow: "none" }} to={node.fields.slug}>
-                      {title}
+                      <h3>{title}</h3>
                     </Link>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
-                  <p>{node.frontmatter.description}</p>
+                    <p>{node.frontmatter.description}</p>
+                  </div>
+                  <div className="col-md-3">
+                    <img src={node.frontmatter.featuredimage} width="200" />
+                  </div>
+
                   {/* <p dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
                 </div>
               )
@@ -110,6 +120,7 @@ export const pageQuery = graphql`
             date
             title
             description
+            featuredimage
           }
         }
       }

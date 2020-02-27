@@ -4,7 +4,7 @@ path: /ipsum
 author: Ipsum
 title: 21 VSCode Shortcuts to Make Coding Faster and More Fun
 description: In addition, a lot of the points listed in this article can be custom bound to a keyboard shortcut, so remember that you don't have to be opening up the command palette everytime you want to invoke a command 1500.
-
+featuredimage: /img/abclogo.png
 tags: ["VS", "vs-code", "programmer"]
 ---
 

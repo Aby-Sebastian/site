@@ -4,6 +4,7 @@ path: /lorem
 author: Lorem
 title: Sixth
 description: This is Sixth
+featuredimage: /img/abclogo.png
 tags: ["animals", "Chicago", "zoos"]
 ---
 

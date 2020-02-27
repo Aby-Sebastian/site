@@ -4,6 +4,7 @@ path: /lorem
 author: Lorem
 title: Hello Twitter this is a test tweet
 description: Testing Twitter with a Test Blog post
+featuredimage: /img/twitter.png
 tags: ["animals", "Chicago", "zoos"]
 ---
 
