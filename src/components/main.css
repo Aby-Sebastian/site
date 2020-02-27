@@ -76,6 +76,9 @@ ul > * {
   padding: 1em;
   list-style-type: none;
 }
+.col-md-3 img{
+  max-width: 100%;
+}
 .imagediv {
   /* margin: 2em; */
   width: 100%;

@@ -22,6 +22,7 @@ class BlogIndex extends React.Component {
           <div className="breadCrumb">
             <Link to="/">Home</Link> > Articles
           </div>
+          <hr style={{ backgroundColor: "white" }} />
           <br />
           <div className="blog-list">
             {posts.map(({ node }) => {
@@ -42,7 +43,13 @@ class BlogIndex extends React.Component {
                     <p>{node.frontmatter.description}</p>
                   </div>
                   <div className="col-md-3">
-                    <img src={node.frontmatter.featuredimage} width="200" />
+                    <Link to={node.fields.slug}>
+                      <img
+                        src={node.frontmatter.featuredimage}
+                        loading="lazy"
+                        width="200"
+                      />
+                    </Link>
                   </div>
 
                   {/* <p dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
