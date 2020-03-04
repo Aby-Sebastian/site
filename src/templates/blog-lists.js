@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { Link, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 class BlogIndex extends React.Component {
   render() {
@@ -18,6 +19,9 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout>
+        <Helmet>
+          <meta name="twitter:title" content="Blog posts are listed here" />
+        </Helmet>
         <div className="container important">
           <div className="breadCrumb">
             <Link to="/">Home</Link> > Articles
