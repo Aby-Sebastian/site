@@ -91,6 +91,10 @@ const Layout = ({ children }) => {
           name="twitter:image"
           content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg"
         /> */}
+        <link
+          rel="stylesheet"
+          href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
+        ></link>
       </Helmet>
       <div className="bg-color">
         <Header menuLinks={data.site.siteMetadata.menuLinks} />

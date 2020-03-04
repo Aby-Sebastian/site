@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { kebabCase } from "lodash"
+import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 
 export default function Template({ data, pageContext }) {
@@ -20,10 +21,17 @@ export default function Template({ data, pageContext }) {
     : null //above code creates next and previous nav links
   return (
     <Layout>
-      <link
-        rel="stylesheet"
-        href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
-      ></link>
+      <Helmet>
+        <meta name="twitter:title" content={post.frontmatter.title} />
+        <meta
+          name="twitter:description"
+          content={post.frontmatter.description}
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.dreamhost.com/blog/wp-content/uploads/2016/08/DreamHost-Accessibility-Tips-750x498.jpg"
+        />
+      </Helmet>
       <div className="container important">
         <div className="breadCrumb">
           <Link to="/">Home</Link> > <Link to="/articles/">Articles</Link> >{" "}
