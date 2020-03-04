@@ -28,7 +28,10 @@ export default function Template({ data, pageContext }) {
           name="twitter:description"
           content={post.frontmatter.description}
         />
-        <meta name="twitter:image" content={"./image.jpg"} />
+        <meta
+          name="twitter:image"
+          content={"/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png"}
+        />
       </Helmet>
       <div className="container important">
         <div className="breadCrumb">
