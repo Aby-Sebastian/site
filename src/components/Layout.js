@@ -70,14 +70,11 @@ const Layout = ({ children }) => {
           name="twitter:url"
           content="https://www.freecodecamp.org/news/how-to-version-a-rest-api/"
         />
+
         <meta
           name="twitter:image"
-          content={`${withPrefix("/")}img/twitter.png`}
-        />
-        {/* <meta
-          name="twitter:image"
           content="https://www.freecodecamp.org/news/content/images/2020/03/Art-Exhibit-Blog-Banner.png"
-        /> */}
+        />
 
         {/* <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@nytimes" />
