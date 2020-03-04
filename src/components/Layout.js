@@ -73,7 +73,7 @@ const Layout = ({ children }) => {
 
         <meta
           name="twitter:image"
-          content="https://www.freecodecamp.org/news/content/images/2020/03/Art-Exhibit-Blog-Banner.png"
+          content="https://www.google.com/accessibility/static/images/home-hero-us.jpg"
         />
 
         {/* <meta name="twitter:card" content="summary_large_image" />
