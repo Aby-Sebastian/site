@@ -29,8 +29,8 @@ const Layout = ({ children }) => {
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
-        {/* <meta name="description" content={description} />
-        <meta property="og:type" content="article" />
+        <meta name="description" content={description} />
+        {/* <meta property="og:type" content="article" />
         <meta property="og:title" content="21 VS code shortcuts" />
         <meta
           property="og:url"
@@ -44,7 +44,38 @@ const Layout = ({ children }) => {
           property="og:image"
           content={`${withPrefix("/")}img/twitter.png`}
         /> */}
+        <meta property="og:site_name" content="freeCodeCamp.org" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="How to Version a REST API" />
+        <meta
+          property="og:description"
+          content="API versioning is difficult to do effectively. Users of APIs feel the pain of changes that break their code, and maintainers of APIs struggle to find strategies for effective API evolution. This article provides a guide to overcoming those challenges."
+        />
+        <meta
+          property="og:url"
+          content="https://www.freecodecamp.org/news/how-to-version-a-rest-api/"
+        />
+        <meta
+          property="og:image"
+          content="https://www.freecodecamp.org/news/content/images/2020/03/Art-Exhibit-Blog-Banner.png"
+        />
+
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="How to Version a REST API" />
+        <meta
+          name="twitter:description"
+          content="API versioning is difficult to do effectively. Users of APIs feel the pain of changes that break their code, and maintainers of APIs struggle to find strategies for effective API evolution. This article provides a guide to overcoming those challenges."
+        />
+        <meta
+          name="twitter:url"
+          content="https://www.freecodecamp.org/news/how-to-version-a-rest-api/"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.freecodecamp.org/news/content/images/2020/03/Art-Exhibit-Blog-Banner.png"
+        />
+
+        {/* <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@nytimes" />
         <meta name="twitter:creator" content="@SarahMaslinNir" />
         <meta
@@ -58,7 +89,7 @@ const Layout = ({ children }) => {
         <meta
           name="twitter:image"
           content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg"
-        />
+        /> */}
       </Helmet>
       <div className="bg-color">
         <Header menuLinks={data.site.siteMetadata.menuLinks} />
