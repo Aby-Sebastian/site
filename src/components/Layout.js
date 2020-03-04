@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
-        <meta name="description" content={description} />
+        {/* <meta name="description" content={description} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="21 VS code shortcuts" />
         <meta
@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
         <meta
           property="og:image"
           content={`${withPrefix("/")}img/twitter.png`}
-        />
+        /> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@nytimes" />
         <meta name="twitter:creator" content="@SarahMaslinNir" />
