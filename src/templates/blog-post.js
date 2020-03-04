@@ -30,7 +30,9 @@ export default function Template({ data, pageContext }) {
         />
         <meta
           name="twitter:image"
-          content={"/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png"}
+          content={
+            "https://infallible-cori-68e745.netlify.com/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png"
+          }
         />
       </Helmet>
       <div className="container important">
