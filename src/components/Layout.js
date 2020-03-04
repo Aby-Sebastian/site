@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-        {/* <meta property="og:type" content="article" />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content="21 VS code shortcuts" />
         <meta
           property="og:url"
@@ -43,8 +43,8 @@ const Layout = ({ children }) => {
         <meta
           property="og:image"
           content={`${withPrefix("/")}img/twitter.png`}
-        /> */}
-        <meta property="og:site_name" content="freeCodeCamp.org" />
+        />
+        {/* <meta property="og:site_name" content="freeCodeCamp.org" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="How to Version a REST API" />
         <meta
@@ -58,7 +58,7 @@ const Layout = ({ children }) => {
         <meta
           property="og:image"
           content="https://www.freecodecamp.org/news/content/images/2020/03/Art-Exhibit-Blog-Banner.png"
-        />
+        /> */}
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="How to Version a REST API" />
@@ -72,8 +72,12 @@ const Layout = ({ children }) => {
         />
         <meta
           name="twitter:image"
-          content="https://www.freecodecamp.org/news/content/images/2020/03/Art-Exhibit-Blog-Banner.png"
+          content={`${withPrefix("/")}img/twitter.png`}
         />
+        {/* <meta
+          name="twitter:image"
+          content="https://www.freecodecamp.org/news/content/images/2020/03/Art-Exhibit-Blog-Banner.png"
+        /> */}
 
         {/* <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@nytimes" />
