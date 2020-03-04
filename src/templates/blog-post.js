@@ -28,12 +28,7 @@ export default function Template({ data, pageContext }) {
           name="twitter:description"
           content={post.frontmatter.description}
         />
-        <meta
-          name="twitter:image"
-          content={
-            "https://www.dreamhost.com/blog/wp-content/uploads/2016/08/DreamHost-Accessibility-Tips-750x498.jpg"
-          }
-        />
+        <meta name="twitter:image" content={"./image.jpg"} />
       </Helmet>
       <div className="container important">
         <div className="breadCrumb">
