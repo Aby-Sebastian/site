@@ -45,14 +45,20 @@ const Layout = ({ children }) => {
           content={`${withPrefix("/")}img/twitter.png`}
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="21 VS code shortcuts" />
-        <meta name="twitter:creator" content="@nickbilton" />
-        <meta name="twitter:description" content="from twitter description" />
+        <meta name="twitter:site" content="@nytimes" />
+        <meta name="twitter:creator" content="@SarahMaslinNir" />
         <meta
-          name="twitter:url"
-          content="https://infallible-cori-68e745.netlify.com/articles/n/"
+          name="twitter:title"
+          content="Parade of Fans for Houston’s Funeral"
         />
-        <meta name="twitter:image" content={twitter} />
+        <meta
+          name="twitter:description"
+          content="NEWARK - The guest list and parade of limousines with celebrities emerging from them seemed more suited to a red carpet event in Hollywood or New York than than a gritty stretch of Sussex Avenue near the former site of the James M. Baxter Terrace public housing project here."
+        />
+        <meta
+          name="twitter:image"
+          content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg"
+        />
       </Helmet>
       <div className="bg-color">
         <Header menuLinks={data.site.siteMetadata.menuLinks} />
