@@ -22,6 +22,7 @@ export default function Template({ data, pageContext }) {
   return (
     <Layout>
       <Helmet>
+        <title>{post.frontmatter.title}</title>
         <meta name="twitter:title" content={post.frontmatter.title} />
         <meta
           name="twitter:description"
