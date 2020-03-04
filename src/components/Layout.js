@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet"
 import "./main.css"
 import "./bootstrap.min.css"
 import { useStaticQuery, graphql, withPrefix } from "gatsby"
+import twitter from "../../static/img/twitter.png"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -43,7 +44,7 @@ const Layout = ({ children }) => {
           property="og:image"
           content={`${withPrefix("/")}img/twitter.png`}
         />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="21 VS code shortcuts" />
         <meta name="twitter:creator" content="@nickbilton" />
         <meta name="twitter:description" content="from twitter description" />
@@ -51,10 +52,7 @@ const Layout = ({ children }) => {
           name="twitter:url"
           content="https://infallible-cori-68e745.netlify.com/articles/n/"
         />
-        <meta
-          name="twitter:image"
-          content={`${withPrefix("/")}img/twitter.png`}
-        />
+        <meta name="twitter:image" content={twitter} />
       </Helmet>
       <div className="bg-color">
         <Header menuLinks={data.site.siteMetadata.menuLinks} />
