@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
           <div className="breadCrumb">
             <Link to="/">Home</Link> > Articles
           </div>
-          <hr style={{ backgroundColor: "white" }} />
+          <hr />
           <br />
           <div className="blog-list">
             {posts.map(({ node }) => {
