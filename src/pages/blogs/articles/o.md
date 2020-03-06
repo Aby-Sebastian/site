@@ -1,5 +1,6 @@
 ---
-date: 26/02/2020
+date: "2020-02-29T22:12:03.284Z"
+
 path: /ipsum
 author: Ipsum
 title: 21 VSCode Shortcuts to Make Coding Faster and More Fun

@@ -1,5 +1,6 @@
 ---
-date: 21/02/2020
+date: "2020-02-19T22:12:03.284Z"
+
 path: /lorem
 author: Lorem
 title: Hello Twitter this is a test tweet
