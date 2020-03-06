@@ -41,8 +41,14 @@ export default function Template({ data, pageContext }) {
         description={post.frontmatter.description}
         keywords={post.frontmatter.tags}
       />
-      <Helmet >
-        <meta name="twitter:image" contents="https://infallible-cori-68e745.netlify.com/img/image.png"/>
+      <Helmet>
+        <meta
+          name="twitter:image"
+          contents={
+            "https://infallible-cori-68e745.netlify.com" +
+            post.frontmatter.featuredimage
+          }
+        />
       </Helmet>
       <div className="container important">
         <div className="breadCrumb">
