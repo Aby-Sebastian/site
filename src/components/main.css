@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+hr {
+  background-color: white;
+}
+
 .taglist ul {
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +80,7 @@ ul > * {
   padding: 1em;
   list-style-type: none;
 }
-.col-md-3 img{
+.col-md-3 img {
   max-width: 100%;
 }
 .imagediv {
