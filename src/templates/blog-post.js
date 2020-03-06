@@ -47,11 +47,10 @@ export default function Template({ data, pageContext }) {
           {post.frontmatter.title}{" "}
         </div>
         <br />
-
         <hr />
         <h1>{post.frontmatter.title}</h1>
         <h5>Posted by {post.frontmatter.author}</h5>
-        <small>{post.frontmatter.date}</small>
+        on <small>{post.frontmatter.date}</small>
         <br />
         {/* <p>{post.frontmatter.description}</p> */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
