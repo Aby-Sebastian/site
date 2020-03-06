@@ -56,7 +56,7 @@ function SEO({ description, lang, meta, keywords, title, location }) {
         },
         {
           property: `og:image`,
-          content: `https://infallible-cori-68e745.netlify.com/img/image.png`,
+          content: `https://infallible-cori-68e745.netlify.com/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png`,
         },
         {
           name: `twitter:card`,
@@ -84,7 +84,7 @@ function SEO({ description, lang, meta, keywords, title, location }) {
         },
         {
           name: `twitter:image`,
-          content: `https://infallible-cori-68e745.netlify.com/img/abclogo.png`,
+          content: `https://infallible-cori-68e745.netlify.com/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png`,
         },
       ]
         .concat(
