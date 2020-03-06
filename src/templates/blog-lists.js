@@ -50,6 +50,7 @@ class BlogIndex extends React.Component {
                     <Link to={node.fields.slug}>
                       <img
                         src={node.frontmatter.featuredimage}
+                        alt={node.frontmatter.featuredimage}
                         loading="lazy"
                         width="200"
                       />
@@ -128,7 +129,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date
+            date(formatString: "MMMM DD, YYYY")
             title
             description
             featuredimage
