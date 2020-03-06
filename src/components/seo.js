@@ -25,8 +25,7 @@ function SEO({ description, lang, meta, keywords, title, location }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  
-  
+
   return (
     <Helmet
       htmlAttributes={{
@@ -57,7 +56,7 @@ function SEO({ description, lang, meta, keywords, title, location }) {
         },
         {
           property: `og:image`,
-          content: `as`,
+          content: `https://infallible-cori-68e745.netlify.com/img/image.png`,
         },
         {
           name: `twitter:card`,
