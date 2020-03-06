@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
+import SEO from "../components/seo"
 
 export default function Template({ data, pageContext }) {
   const post = data.markdownRemark
@@ -21,7 +22,7 @@ export default function Template({ data, pageContext }) {
     : null //above code creates next and previous nav links
   return (
     <Layout>
-      <Helmet>
+      {/* <Helmet>
         <title>{post.frontmatter.title}</title>
         <meta name="twitter:title" content={post.frontmatter.title} />
         <meta
@@ -34,19 +35,24 @@ export default function Template({ data, pageContext }) {
             "https://infallible-cori-68e745.netlify.com/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png"
           }
         />
-      </Helmet>
+      </Helmet> */}
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        keywords={post.frontmatter.tags}
+      />
       <div className="container important">
         <div className="breadCrumb">
           <Link to="/">Home</Link> > <Link to="/articles/">Articles</Link> >{" "}
           {post.frontmatter.title}{" "}
         </div>
         <br />
-        <Link to="/articles/">Go back</Link>
+
         <hr />
         <h1>{post.frontmatter.title}</h1>
-        <h5>
-          Posted by {post.frontmatter.author} On {post.frontmatter.date}
-        </h5>{" "}
+        <h5>Posted by {post.frontmatter.author}</h5>
+        <small>{post.frontmatter.date}</small>
+        <br />
         {/* <p>{post.frontmatter.description}</p> */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <div className="taglist">
@@ -86,7 +92,7 @@ export default function Template({ data, pageContext }) {
                     "&text=" +
                     post.frontmatter.title +
                     "&via" +
-                    "twitterHandle"
+                    post.frontmatter.author
                   }
                   className="twitter"
                   target="_blank"
@@ -144,7 +150,7 @@ export const postQuery = graphql`
         title
         description
         author
-        date
+        date(formatString: "MMMM DD, YYYY")
         featuredimage
         tags
       }
