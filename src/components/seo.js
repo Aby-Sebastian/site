@@ -25,8 +25,8 @@ function SEO({ description, lang, meta, keywords, title, location }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const loc = window.location
-  console.log(loc.href)
+  
+  
   return (
     <Helmet
       htmlAttributes={{
@@ -53,7 +53,7 @@ function SEO({ description, lang, meta, keywords, title, location }) {
         },
         {
           property: `og:url`,
-          content: loc,
+          content: `https://infallible-cori-68e745.netlify.com/`,
         },
         {
           property: `og:image`,
@@ -81,7 +81,7 @@ function SEO({ description, lang, meta, keywords, title, location }) {
         },
         {
           name: `twitter:url`,
-          content: loc,
+          content: `https://infallible-cori-68e745.netlify.com/`,
         },
         {
           name: `twitter:image`,
