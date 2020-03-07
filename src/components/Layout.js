@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "./header"
 import FooterPage from "./footer"
-import { Helmet } from "react-helmet"
+
 import "./main.css"
 import "./bootstrap.min.css"
 import { useStaticQuery, graphql, withPrefix } from "gatsby"
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   const description = data.site.siteMetadata.description
   return (
     <>
-      <SEO title="Home"/>
+      <SEO title="Home" />
       <link
         rel="stylesheet"
         href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
