@@ -12,7 +12,9 @@
 hr {
   background-color: white;
 }
-
+.new-view a {
+  color: white;
+}
 .taglist ul {
   display: flex;
   flex-wrap: wrap;
