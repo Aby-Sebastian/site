@@ -42,6 +42,7 @@ export default function Template({ data, pageContext }) {
         keywords={post.frontmatter.tags}
       />
       <Helmet>
+        <meta name="twitter:image" contents="summary_large_image"/>
         <meta
           name="twitter:image"
           contents={
