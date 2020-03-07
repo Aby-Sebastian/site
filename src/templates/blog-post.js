@@ -42,7 +42,7 @@ export default function Template({ data, pageContext }) {
         keywords={post.frontmatter.tags}
       />
       <Helmet>
-        <meta name="twitter:card" contents="summary_large_image"/>
+        <meta name="twitter:card" contents="summary_large_image" />
         <meta
           name="twitter:image"
           contents={
@@ -151,10 +151,10 @@ export default function Template({ data, pageContext }) {
 }
 
 export const postQuery = graphql`
-  query BlogPostByPath($title: String!) {
-    markdownRemark(frontmatter: { title: { eq: $title } }) {
+  query BlogPostByPath($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html
-
+      id
       frontmatter {
         title
         description

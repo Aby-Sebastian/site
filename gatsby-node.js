@@ -22,6 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
+            id
             fields {
               slug
             }
@@ -44,6 +45,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   //create blog posts page
   posts.forEach(({ node }, index) => {
+    const id = node.id
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/blog-post.js`),
@@ -52,6 +54,7 @@ exports.createPages = async ({ graphql, actions }) => {
         next: index === posts.length - 1 ? null : posts[index + 1].node,
         title: node.frontmatter.title,
         slug: node.fields.slug,
+        id
       },
     })
   })
