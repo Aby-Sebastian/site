@@ -59,6 +59,10 @@ function SEO({ description, lang, meta, keywords, title, location }) {
           content: `https://infallible-cori-68e745.netlify.com/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png`,
         },
         {
+          property: `og:image:alt`,
+          content: `logo of coinedone technologies`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -85,6 +89,10 @@ function SEO({ description, lang, meta, keywords, title, location }) {
         {
           name: `twitter:image`,
           content: `https://infallible-cori-68e745.netlify.com/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png`,
+        },
+        {
+          name: `twitter:image:alt`,
+          content: `logo of coinedone technologies`,
         },
       ]
         .concat(
