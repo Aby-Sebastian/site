@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title, location }) {
+function SEO({ description, lang, meta, keywords, title, card, image, alt }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -25,13 +25,17 @@ function SEO({ description, lang, meta, keywords, title, location }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-
+  const tcard = card || "summary"
+  const timage =
+    image ||
+    "https://infallible-cori-68e745.netlify.com/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png"
+  const talt = alt || "logo of coinedone technologies"
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={title} 
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
@@ -56,15 +60,15 @@ function SEO({ description, lang, meta, keywords, title, location }) {
         },
         {
           property: `og:image`,
-          content: `https://infallible-cori-68e745.netlify.com/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png`,
+          content: timage,
         },
         {
           property: `og:image:alt`,
-          content: `logo of coinedone technologies`,
+          content: talt,
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: tcard,
         },
         {
           name: `twitter:creator`,
@@ -88,11 +92,11 @@ function SEO({ description, lang, meta, keywords, title, location }) {
         },
         {
           name: `twitter:image`,
-          content: `https://infallible-cori-68e745.netlify.com/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png`,
+          content: timage,
         },
         {
           name: `twitter:image:alt`,
-          content: `logo of coinedone technologies`,
+          content: talt,
         },
       ]
         .concat(
