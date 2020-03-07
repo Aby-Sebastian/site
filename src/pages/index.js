@@ -31,7 +31,7 @@ const IndexPage = () => {
           </div>
         </main>
       </div>
-      <div className="container">
+      {/* <div className="container">                   #icons
         <section>
           <div className="imagediv">
             <div className="row1 row">
@@ -46,7 +46,7 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-      </div>
+      </div> */}
       <div className="container">
         <section className="row">
           <p className="simpleexplanation smallfonts col-md-11 col-xs-11 col-lg-11">
