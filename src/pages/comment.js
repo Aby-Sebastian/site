@@ -1,67 +1,123 @@
 import React from "react"
+import Layout from "../components/Layout"
+import { Link, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
-export default class IndexPage extends React.Component {
-  state = {
-    firstName: "",
-    lastName: "",
-  }
-
-  handleInputChange = event => {
-    const target = event.target
-    const value = target.value
-    const name = target.name
-
-    this.setState({
-      [name]: value,
-    })
-  }
-
-  handleSubmit = event => {
-    event.preventDefault()
-    alert(
-      `Welcome ${this.state.firstName} ${this.state.lastName}! ${this.state.message}`
-    )
-    var myCar = new Object()
-    myCar.make = this.state.firstName
-    myCar.model = this.state.lastName
-    myCar.year = this.state.message
-    console.log(myCar)
-  }
-
+class BlogIndex extends React.Component {
   render() {
+    const { data } = this.props
+    // const siteTitle = data.site.siteMetadata.title
+    const posts = data.allMarkdownRemark.edges
+    const change = data.su.edges
     return (
-      <>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            First name
-            <input
-              type="text"
-              name="firstName"
-              value={this.state.firstName}
-              onChange={this.handleInputChange}
-            />
-          </label>
-          <label>
-            Last name
-            <input
-              type="text"
-              name="lastName"
-              value={this.state.lastName}
-              onChange={this.handleInputChange}
-            />
-          </label>
-          <label>
-            Messages
-            <textarea
-              type="text"
-              name="message"
-              value={this.state.message}
-              onChange={this.handleInputChange}
-            />
-          </label>
-          <button type="submit">Submit</button>
-        </form>
-      </>
+      <Layout>
+        <Helmet>
+          <meta name="twitter:title" content="Blog posts are listed here" />
+        </Helmet>
+        <div className="container important">
+          <div className="breadCrumb">
+            <Link to="/">Home</Link> > Articles
+          </div>
+          <hr />
+          <br />
+          <div className="blog-list">
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <div
+                  key={node.fields.slug}
+                  className="blog-post row"
+                  style={{
+                    marginBottom: "5em",
+                  }}
+                >
+                  <div className="col-md-3">{node.frontmatter.date}</div>
+                  <div className="col-md-6">
+                    <Link style={{ boxShadow: "none" }} to={node.fields.slug}>
+                      <h3>{title}</h3>
+                    </Link>
+                    <p>{node.frontmatter.description}</p>
+                  </div>
+                  <div className="col-md-3">
+                    <Link to={node.fields.slug}>
+                      <img
+                        src={node.frontmatter.featuredimage}
+                        alt={node.frontmatter.featuredimage}
+                        loading="lazy"
+                        width="200"
+                      />
+                    </Link>
+                  </div>
+
+                  {/* <p dangerouslySetInnerHTML={{ __html: node.excerpt }} /> */}
+                </div>
+              )
+            })}
+          </div>
+          <div className="new-view row">
+            {change.map(({ node }) => {
+              return (
+                <div className="card-article col-md-3" key={node.fields.slug}>
+                  <Link to={node.fields.slug}>
+                    <h3>{node.frontmatter.title}</h3>
+                  </Link>
+                  <p>{node.excerpt}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </Layout>
     )
   }
 }
+
+export default BlogIndex
+
+export const pageQuery = graphql`
+  query blogPageQueryFor {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 5
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            featuredimage
+          }
+        }
+      }
+    }
+    su: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      skip: 5
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            featuredimage
+          }
+        }
+      }
+    }
+  }
+`
