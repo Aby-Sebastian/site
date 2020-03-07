@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { kebabCase } from "lodash"
-import { Helmet } from "react-helmet"
+
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
@@ -22,35 +22,19 @@ export default function Template({ data, pageContext }) {
     : null //above code creates next and previous nav links
   return (
     <Layout>
-      {/* <Helmet>
-        <title>{post.frontmatter.title}</title>
-        <meta name="twitter:title" content={post.frontmatter.title} />
-        <meta
-          name="twitter:description"
-          content={post.frontmatter.description}
-        />
-        <meta
-          name="twitter:image"
-          content={
-            "https://infallible-cori-68e745.netlify.com/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png"
-          }
-        />
-      </Helmet> */}
+      
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
         keywords={post.frontmatter.tags}
+        card="summary_large_image"
+        image={
+          "https://infallible-cori-68e745.netlify.com" +
+          post.frontmatter.featuredimage
+        }
+        alt="Articles"
       />
-      <Helmet>
-        <meta name="twitter:card" contents="summary_large_image" />
-        <meta
-          name="twitter:image"
-          contents={
-            "https://infallible-cori-68e745.netlify.com" +
-            post.frontmatter.featuredimage
-          }
-        />
-      </Helmet>
+      
       <div className="container important">
         <div className="breadCrumb">
           <Link to="/">Home</Link> > <Link to="/articles/">Articles</Link> >{" "}
