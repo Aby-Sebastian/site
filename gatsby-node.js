@@ -54,7 +54,7 @@ exports.createPages = async ({ graphql, actions }) => {
         next: index === posts.length - 1 ? null : posts[index + 1].node,
         title: node.frontmatter.title,
         slug: node.fields.slug,
-        id
+        id,
       },
     })
   })
