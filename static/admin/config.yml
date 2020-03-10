@@ -31,13 +31,24 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Image"
-        name: "Image"
+      - label: "Testimonials"
+        name: "testimonials"
         widget: "list"
         fields:
-          - label: Images
-              name: images
-              widget: object
-              fields:
-                - { label: Alt, name: alt, widget: string }
-                - { label: Image, name: image, widget: image }
+          - {
+              label: Quote,
+              name: quote,
+              widget: string,
+              
+            }
+          - label: Author
+            name: author
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string }
+              - {
+                  label: Avatar,
+                  name: avatar,
+                  widget: image,
+                  
+                }
