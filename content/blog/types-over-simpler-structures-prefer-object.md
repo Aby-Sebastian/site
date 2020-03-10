@@ -6,7 +6,7 @@ description: >-
   Types over simpler structures test desription Widgets define the data type and
   interface for entry fields. Netlify CMS.
 image:
-  image: /img/twitter.png
+  image: /img/beautiful-beauty-blue-bright-414612.jpg
   alt: Types over simpler structures
 tags:
   - Types
@@ -14,7 +14,7 @@ tags:
   - simpler
   - structures
 ---
-![jhsjd](/img/image.png "adsd")
+![jhsjd](/img/beautiful-beauty-blue-bright-414612.jpg "adsd")
 
 Netlify CMS.
 
