@@ -54,7 +54,7 @@ const BlogIndex = props => {
             aria-label="Search"
             placeholder="Type to filter posts..."
             onChange={handleInputChange}
-            autoFocus
+            
           />
         </div>
 
