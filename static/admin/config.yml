@@ -35,20 +35,10 @@ collections:
         name: "testimonials"
         widget: "list"
         fields:
-          - {
-              label: Quote,
-              name: quote,
-              widget: string,
-              
-            }
+          - { label: Quote, name: quote, widget: string }
           - label: Author
             name: author
             widget: object
             fields:
               - { label: Name, name: name, widget: string }
-              - {
-                  label: Avatar,
-                  name: avatar,
-                  widget: image,
-                  
-                }
+              - { label: Avatar, name: avatar, widget: image }
