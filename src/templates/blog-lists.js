@@ -8,15 +8,7 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     // const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
-    const { currentPage, numPages } = this.props.pageContext
-    const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
-    const prevPage =
-      currentPage - 1 === 1
-        ? "/articles"
-        : "/articles/" + (currentPage - 1).toString()
-    const nextPage = "/articles/" + (currentPage + 1).toString()
-
+    const change = data.su.edges
     return (
       <Layout>
         <Helmet>
@@ -36,7 +28,7 @@ class BlogIndex extends React.Component {
                   key={node.fields.slug}
                   className="blog-post row"
                   style={{
-                    marginBottom: "10rem",
+                    marginBottom: "5em",
                   }}
                 >
                   <div className="col-md-3">{node.frontmatter.date}</div>
@@ -61,46 +53,18 @@ class BlogIndex extends React.Component {
                 </div>
               )
             })}
-            <ul
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                alignItems: "center",
-                listStyle: "none",
-                padding: 0,
-              }}
-            >
-              {!isFirst && (
-                <Link to={prevPage} rel="prev">
-                  ← Previous Page
-                </Link>
-              )}
-              {Array.from({ length: numPages }, (_, i) => (
-                <li
-                  key={`pagination-number${i + 1}`}
-                  style={{
-                    margin: 0,
-                  }}
-                >
-                  <Link
-                    to={`/${i === 0 ? "articles" : "articles/" + (i + 1)}`}
-                    style={{
-                      textDecoration: "none",
-                      color: i + 1 === currentPage ? "#ffffff" : "",
-                      background: i + 1 === currentPage ? "#007acc" : "",
-                    }}
-                  >
-                    {i + 1}
+          </div>
+          <div className="new-view row">
+            {change.map(({ node }) => {
+              return (
+                <div className="card-article col-md-3" key={node.fields.slug}>
+                  <Link to={node.fields.slug}>
+                    <h3>{node.frontmatter.title}</h3>
                   </Link>
-                </li>
-              ))}
-              {!isLast && (
-                <Link to={nextPage} rel="next">
-                  Next Page →
-                </Link>
-              )}
-            </ul>
+                  <p>{node.excerpt}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </Layout>
@@ -111,7 +75,7 @@ class BlogIndex extends React.Component {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query blogPageQuery($skip: Int!, $limit: Int!) {
+  query blogPageQueryFor {
     site {
       siteMetadata {
         title
@@ -119,8 +83,26 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
+      limit: 5
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            featuredimage
+          }
+        }
+      }
+    }
+    su: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      skip: 5
     ) {
       edges {
         node {
