@@ -14,6 +14,8 @@ tags:
   - simpler
   - structures
 ---
+![jhsjd](/img/image.png "adsd")
+
 Netlify CMS.
 
 Widgets define the data type and interface for entry fields
