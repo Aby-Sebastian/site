@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         name: "Resource",
-        link: "/comment",
+        link: "/resource",
       },
       {
         // name: "About Us",
@@ -72,5 +72,6 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify-cms`,
   ],
 }
