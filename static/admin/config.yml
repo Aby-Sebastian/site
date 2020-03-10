@@ -25,9 +25,9 @@ collections:
           - { label: Image, name: image, widget: image }
           - { label: Alt, name: alt, widget: string }
       - label: "Tags"
-          name: "tags"
-          widget: "list"
-          default: ["news"]
+        name: "tags"
+        widget: "list"
+        default: ["news"]
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "news"
