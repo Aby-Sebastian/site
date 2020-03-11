@@ -3,6 +3,10 @@ author: aby
 title: Three
 date: 2020-01-25T06:13:38.220Z
 description: 'It has survived not only five centuries,'
+keywords:
+  - animals
+  - chicago
+  - zoos
 image:
   image: /img/image.png
   alt: B&W representational image
