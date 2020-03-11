@@ -18,6 +18,9 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - label: "Keywords"
+        name: "keywords"
+        widget: "list"
       - label: Featured Image
         name: image
         widget: object
@@ -27,7 +30,6 @@ collections:
       - label: "Tags"
         name: "tags"
         widget: "list"
-        default: ["news"]
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "news"
