@@ -6,6 +6,10 @@ description: >-
   In addition, a lot of the points listed in this article can be custom bound to
   a keyboard shortcut, so remember that you don't have to be opening up the
   command palette everytime you want to invoke a command 1500.
+keywords:
+  - VS
+  - vs-code
+  - programmer
 image:
   image: /img/abclogo.png
   alt: logo of  abc
