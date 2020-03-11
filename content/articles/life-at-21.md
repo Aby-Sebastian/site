@@ -3,6 +3,10 @@ author: aby
 title: life at 21
 date: 2020-03-05T06:01:09.540Z
 description: Ut proident consectetur adipisicing incididunt quis.
+keywords:
+  - python
+  - programmer
+  - encyclopedia
 image:
   image: /img/beautiful-beauty-blue-bright-414612.jpg
   alt: 'landscape '
