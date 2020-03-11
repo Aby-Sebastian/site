@@ -3,6 +3,10 @@ author: aby
 title: command palette everytime you want to invoke a command
 date: 2020-02-17T06:09:05.594Z
 description: Exercitation fugiat incididunt deserunt voluptate.
+keywords:
+  - deserunt
+  - fugiat
+  - Exercitation
 image:
   image: /img/image.png
   alt: logo of b&W
