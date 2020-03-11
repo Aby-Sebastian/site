@@ -3,6 +3,10 @@ author: aby
 title: Two
 date: 2020-01-21T06:16:29.847Z
 description: 'It has survived not only five centuries,'
+keywords:
+  - animals
+  - chicago
+  - zoos
 image:
   image: /img/twitter.png
   alt: logo of twitter
