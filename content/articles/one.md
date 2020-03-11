@@ -3,6 +3,10 @@ author: aby
 title: One
 date: 2020-01-01T06:14:59.339Z
 description: 'It has survived not only five centuries,'
+keywords:
+  - animals
+  - chicago
+  - zoos
 image:
   image: /img/beautiful-beauty-blue-bright-414612.jpg
   alt: image of a beautiful location
