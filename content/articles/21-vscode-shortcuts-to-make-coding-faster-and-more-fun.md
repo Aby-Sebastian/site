@@ -22,8 +22,7 @@ In addition, a lot of the points listed in this article can be custom bound to a
 
 
 
-\[Link](https://www.google.com)
-
+[Link](https://www.google.com)
 
 
 In this post I will list my top favorite shortcuts that make me a faster coder. I personally think it makes coding a lot funner when applying these shortcuts. Watching your time get cut in half makes me feel proactive :)
