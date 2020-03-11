@@ -10,7 +10,7 @@ const Simap = ({ data }) => {
         {post.edges.map(({ node }) => {
           return (
             <>
-              <Link to={node.path}>
+              <Link to={node.path} className="silinks">
                 https://infallible-cori-68e745.netlify.com{node.path}
               </Link>{" "}
               <br />
