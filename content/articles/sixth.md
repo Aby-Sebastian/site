@@ -3,6 +3,10 @@ author: aby
 title: Sixth
 date: 2020-02-15T06:07:48.118Z
 description: This is Sixth
+keywords:
+  - animals
+  - chicago
+  - zoos
 image:
   image: /img/abclogo.png
   alt: logo of abc
