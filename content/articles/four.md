@@ -3,6 +3,11 @@ author: aby
 title: Four
 date: 2020-02-05T06:12:30.919Z
 description: 'It has survived not only five hundread centuries,'
+keywords:
+  - animals
+  - chicago
+  - zoos
+  - questro
 image:
   image: /img/abclogo.png
   alt: logo of abc
