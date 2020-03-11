@@ -8,6 +8,18 @@
   margin: 0;
   padding: 0;
 }
+.container a {
+  color: white;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+.footer-section div {
+  display: grid;
+}
 
 .main-area img {
   max-width: 500px;

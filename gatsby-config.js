@@ -7,6 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
+    siteUrl: "https://infallible-cori-68e745.netlify.com/",
     title: "CoinedOne Technologies",
     description:
       "Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
@@ -47,6 +48,7 @@ module.exports = {
     ],
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
