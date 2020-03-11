@@ -80,7 +80,7 @@ function SEO({ description, lang, meta, keywords, title, card, image, alt }) {
         },
         {
           name: `twitter:title`,
-          content: `CoinedOne Technologies`,
+          content: title,
         },
         {
           name: `twitter:description`,
