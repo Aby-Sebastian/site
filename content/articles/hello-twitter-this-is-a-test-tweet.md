@@ -3,6 +3,10 @@ author: aby
 title: Hello Twitter this is a test tweet
 date: 2020-02-19T06:06:34.804Z
 description: Testing Twitter with a Test Blog post
+keywords:
+  - animals
+  - chicago
+  - zoos
 image:
   image: /img/twitter.png
   alt: logo of twitter
