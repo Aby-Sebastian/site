@@ -35,7 +35,7 @@ function SEO({ description, lang, meta, keywords, title, card, image, alt }) {
       htmlAttributes={{
         lang,
       }}
-      title={title} 
+      title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
@@ -80,7 +80,7 @@ function SEO({ description, lang, meta, keywords, title, card, image, alt }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: `CoinedOne Technologies`,
         },
         {
           name: `twitter:description`,
