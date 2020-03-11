@@ -76,7 +76,7 @@ function SEO({ description, lang, meta, keywords, title, card, image, alt }) {
         },
         {
           name: `twitter:site`,
-          content: `@CoinedOne`,
+          content: `CoinedOne Technologies`,
         },
         {
           name: `twitter:title`,
