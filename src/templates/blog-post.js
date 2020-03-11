@@ -30,9 +30,9 @@ export default function Template({ data, pageContext }) {
         card="summary_large_image"
         image={
           "https://infallible-cori-68e745.netlify.com" +
-          post.frontmatter.featuredimage
+          post.frontmatter.image.image
         }
-        alt="Articles"
+        alt={post.frontmatter.image.alt}
       />
       
       <div className="container important">
@@ -144,7 +144,10 @@ export const postQuery = graphql`
         description
         author
         date(formatString: "MMMM DD, YYYY")
-        featuredimage
+        image{
+          image
+          alt
+        }
         tags
       }
     }

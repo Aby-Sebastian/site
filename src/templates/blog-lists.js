@@ -41,8 +41,8 @@ class BlogIndex extends React.Component {
                   <div className="col-md-3">
                     <Link to={node.fields.slug}>
                       <img
-                        src={node.frontmatter.featuredimage}
-                        alt={node.frontmatter.featuredimage}
+                        src={node.frontmatter.image.image}
+                        alt={node.frontmatter.image.alt}
                         loading="lazy"
                         width="200"
                       />
@@ -95,7 +95,10 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
-            featuredimage
+            image {
+              alt
+              image
+            }
           }
         }
       }
@@ -114,7 +117,6 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
-            featuredimage
           }
         }
       }
