@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+.main-area img {
+  max-width: 500px;
+}
+
 hr {
   background-color: white;
 }

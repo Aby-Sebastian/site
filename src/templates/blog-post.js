@@ -47,7 +47,7 @@ export default function Template({ data, pageContext }) {
         on <small>{post.frontmatter.date}</small>
         <br />
         {/* <p>{post.frontmatter.description}</p> */}
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="main-area" dangerouslySetInnerHTML={{ __html: post.html }} />
         <div className="taglist">
           <h4>Tags</h4>
           <ul>
