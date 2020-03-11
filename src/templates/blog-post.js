@@ -26,7 +26,7 @@ export default function Template({ data, pageContext }) {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        keywords={post.frontmatter.tags}
+        keywords={post.frontmatter.keywords}
         card="summary_large_image"
         image={
           "https://infallible-cori-68e745.netlify.com" +
@@ -144,6 +144,7 @@ export const postQuery = graphql`
         description
         author
         date(formatString: "MMMM DD, YYYY")
+        keywords
         image{
           image
           alt
