@@ -7,7 +7,7 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     // const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+    const posts = data.allFile.edges
     const change = data.su.edges
     return (
       <Layout>
@@ -22,27 +22,27 @@ class BlogIndex extends React.Component {
           <br />
           <div className="blog-list">
             {posts.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug
+              const title = node.childMarkdownRemark.frontmatter.title || node.childMarkdownRemark.fields.slug
               return (
                 <div
-                  key={node.fields.slug}
+                  key={node.childMarkdownRemark.fields.slug}
                   className="blog-post row"
                   style={{
                     marginBottom: "5em",
                   }}
                 >
-                  <div className="col-md-3">{node.frontmatter.date}</div>
+                  <div className="col-md-3">{node.childMarkdownRemark.frontmatter.date}</div>
                   <div className="col-md-6">
-                    <Link style={{ boxShadow: "none" }} to={node.fields.slug}>
+                    <Link style={{ boxShadow: "none" }} to={node.childMarkdownRemark.fields.slug}>
                       <h3>{title}</h3>
                     </Link>
-                    <p>{node.frontmatter.description}</p>
+                    <p>{node.childMarkdownRemark.frontmatter.description}</p>
                   </div>
                   <div className="col-md-3">
-                    <Link to={node.fields.slug}>
+                    <Link to={node.childMarkdownRemark.fields.slug}>
                       <img
-                        src={node.frontmatter.image.image}
-                        alt={node.frontmatter.image.alt}
+                        src={node.childMarkdownRemark.frontmatter.image.image}
+                        alt={node.childMarkdownRemark.frontmatter.image.alt}
                         loading="lazy"
                         width="200"
                       />
@@ -81,23 +81,27 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+    allFile(
+      filter: {relativeDirectory: {eq: "articles"}}, 
+      sort: { fields: [childMarkdownRemark___frontmatter___date], order: DESC }
       limit: 5
     ) {
       edges {
         node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            image {
-              alt
-              image
+          childMarkdownRemark {
+
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              title
+              description
+              image {
+                alt
+                image
+              }
             }
           }
         }
