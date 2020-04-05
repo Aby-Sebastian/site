@@ -4,6 +4,7 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+show_preview_links: true
 
 collections:
   - name: "blog"
