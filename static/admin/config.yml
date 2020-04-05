@@ -62,6 +62,7 @@ collections:
       - file: "src/pages/index.md"
         label: "Home Page"
         name: "index"
+        fields:
           - {label: Heading, name: heading, widget: string}
           - {label: Subheading, name: subheading, widget: string}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
