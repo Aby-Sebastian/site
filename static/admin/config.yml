@@ -12,6 +12,7 @@ collections:
     folder: "src/pages/articles"
     create: true
     slug: "{{slug}}"
+    preview_path: articles/{{slug}}
     editor:
       preview: false
     fields:
