@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+  preview_context: deploy-preview
 
 media_folder: static/img
 public_folder: /img
@@ -39,6 +40,7 @@ collections:
     folder: "src/pages/news"
     create: true
     slug: "{{slug}}"
+    preview_path: news/{{slug}}
     editor:
       preview: true
     fields:
