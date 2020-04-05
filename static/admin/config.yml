@@ -12,8 +12,8 @@ collections:
     label: "Articles"
     folder: "src/pages/articles"
     create: true
-    slug: "{{title}}"
-    preview_path: articles/{{title}}
+    slug: "{{slug}}"
+    preview_path: articles/{{slug}}
     editor:
       preview: false
     fields:
@@ -39,8 +39,8 @@ collections:
     label: "News"
     folder: "src/pages/news"
     create: true
-    slug: "{{title}}"
-    preview_path: news/{{title}}
+    slug: "{{slug}}"
+    preview_path: news/{{slug}}
     editor:
       preview: true
     fields:
