@@ -12,8 +12,8 @@ collections:
     label: "Articles"
     folder: "src/pages/articles"
     create: true
-    slug: "{{slug}}"
-    preview_path: articles/{{slug}}
+    slug: "{{title}}"
+    preview_path: articles/{{title}}
     editor:
       preview: false
     fields:
@@ -39,26 +39,16 @@ collections:
     label: "News"
     folder: "src/pages/news"
     create: true
-    slug: "{{slug}}"
-    preview_path: news/{{slug}}
+    slug: "{{title}}"
+    preview_path: news/{{title}}
     editor:
       preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Testimonials"
-        name: "testimonials"
-        widget: "list"
-        fields:
-          - { label: Quote, name: quote, widget: string }
-          - label: Author
-            name: author
-            widget: object
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Avatar, name: avatar, widget: image }
+      - { label: "Link", name: "link", widget: "string" }
+      
 
   - name: "pages"
     label: "Pages"
