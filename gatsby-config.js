@@ -95,7 +95,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 500,
+              maxWidth: 400,
               loading: "lazy",
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
