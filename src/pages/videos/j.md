@@ -7,7 +7,7 @@ keywords:
   - vid
   - video
 image:
-  
+  image: /img/beautiful-beauty-blue-bright-414612.jpg
   alt: 'location '
 tags:
   - vid
