@@ -22,10 +22,7 @@ class BlogIndex extends React.Component {
             {posts.map(({ node }) => {
               
               return (
-                
-
                   <div dangerouslySetInnerHTML={{ __html: node.childMarkdownRemark.html }} />
-                
               )
             })}
           </div>

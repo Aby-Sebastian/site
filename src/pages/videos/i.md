@@ -13,10 +13,6 @@ tags:
   - vid
   - video
 ---
-# Look at this Video:
-
-
-
 `vimeo: https://vimeo.com/5299404`
 
 
