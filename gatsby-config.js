@@ -11,7 +11,6 @@ module.exports = {
     title: "CoinedOne Technologies",
     description:
       "Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.",
-    image: "https://infallible-cori-68e745.netlify.com/static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png",
     menuLinks: [
       {
         name: "Home",
