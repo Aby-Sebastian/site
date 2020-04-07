@@ -20,6 +20,7 @@ export default function Template({ data, pageContext }) {
         title: pageContext.next.frontmatter.title,
       }
     : null //above code creates next and previous nav links
+  const kimage = "https://infallible-cori-68e745.netlify.com"+post.frontmatter.image.image || data.site.siteMetadata.image
   return (
     <Layout>
       
@@ -29,8 +30,7 @@ export default function Template({ data, pageContext }) {
         keywords={post.frontmatter.keywords}
         card="summary_large_image"
         image={
-          "https://infallible-cori-68e745.netlify.com" +
-          post.frontmatter.image.image
+          kimage
         }
         alt={post.frontmatter.image.alt}
       />
@@ -150,6 +150,11 @@ export const postQuery = graphql`
           alt
         }
         tags
+      }
+    }
+    site {
+      siteMetadata {
+        image
       }
     }
   }
