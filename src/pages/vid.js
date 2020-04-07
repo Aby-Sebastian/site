@@ -22,7 +22,11 @@ class BlogIndex extends React.Component {
             {posts.map(({ node }) => {
               
               return (
+                <div>
+                  <h3>{node.childMarkdownRemark.frontmatter.title}</h3>
                   <div dangerouslySetInnerHTML={{ __html: node.childMarkdownRemark.html }} />
+                  <h5>{node.childMarkdownRemark.frontmatter.description}</h5>
+                </div>
               )
             })}
           </div>
@@ -46,6 +50,10 @@ export const pageQuery = graphql`
         node {
           childMarkdownRemark {
             html
+            frontmatter{
+              title
+              description
+            }
           }
         }
       }

@@ -1,8 +1,8 @@
 ---
 author: aby
-title: blah blah blah
+title: Episode 2 Selling the Value of Your Design System 
 date: 2020-02-11T06:10:28.876Z
-description: test vid
+description: Early alignment is everything. Whether you’re starting (or restarting) a design system, learn who to involve and how to get buy-in.
 keywords:
   - vid
   - video

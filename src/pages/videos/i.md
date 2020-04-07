@@ -1,8 +1,8 @@
 ---
 author: aby
-title: Fifth
+title: Episode 1 The Heartache of Design at Scale
 date: 2020-02-11T06:10:28.876Z
-description: test vid
+description: Companies with growing design ambitions often struggle with speed and consistency. Learn how design systems can help your team operate at scale.
 keywords:
   - vid
   - video

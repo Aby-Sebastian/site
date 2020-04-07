@@ -9,8 +9,7 @@ image:
 tags:
   - vid
   - video
-title: tes
-description: hi
-link: d
+title: Episode 3 Selling the Value of Your Design System 
+description: Early alignment is everything. Whether you’re starting (or restarting) a design system, learn who to involve and how to get buy-in.
 ---
 `youtube: https://www.youtube.com/watch?v=Vp2TclEYajw`
