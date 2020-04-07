@@ -20,6 +20,7 @@ export default function Template({ data, pageContext }) {
         title: pageContext.next.frontmatter.title,
       }
     : null //above code creates next and previous nav links
+  const seo_image = post.frontmatter.image.image || "static/Opnlogo-a76fc7b9f021af6bf9328e2cb9e26836.png"
   return (
     <Layout>
       
@@ -30,7 +31,7 @@ export default function Template({ data, pageContext }) {
         card="summary_large_image"
         image={
           "https://infallible-cori-68e745.netlify.com" +
-          post.frontmatter.image.image
+          seo_image
         }
         alt={post.frontmatter.image.alt}
       />

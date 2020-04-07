@@ -16,6 +16,8 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+
 .footer-section {
   display: flex;
   justify-content: space-around;

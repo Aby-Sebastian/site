@@ -24,7 +24,7 @@ class BlogIndex extends React.Component {
               return (
                 
 
-                  <p dangerouslySetInnerHTML={{ __html: node.childMarkdownRemark.html }} />
+                  <div dangerouslySetInnerHTML={{ __html: node.childMarkdownRemark.html }} />
                 
               )
             })}
