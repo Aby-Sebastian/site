@@ -67,6 +67,12 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - label: Featured Image
+        name: image
+        widget: object
+        fields:
+          - { label: Image, name: image, widget: image, default: "img/abclogo.png" }
+          - { label: Alt, name: alt, widget: string, default: "abc logo" }
       - { label: "Link", name: "link", widget: "string" }
 
   - name: "glossary"
