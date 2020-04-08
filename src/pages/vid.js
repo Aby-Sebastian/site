@@ -14,19 +14,21 @@ class BlogIndex extends React.Component {
         
         <div className="container important">
           <div className="breadCrumb">
-            <Link to="/">Home</Link> > Articles
+            <Link to="/">Home</Link> > Videos
           </div>
           <hr />
           <br />
-            <div className="video-list">
+            <div className="new-view row">
             {posts.map(({ node }) => {
               
               return (
-                <div>
-                  <h3>{node.childMarkdownRemark.frontmatter.title}</h3>
-                  <div dangerouslySetInnerHTML={{ __html: node.childMarkdownRemark.html }} />
-                  <h5>{node.childMarkdownRemark.frontmatter.description}</h5>
-                </div>
+                
+                  <div className="card-article col-md-6">
+                    <h3>{node.childMarkdownRemark.frontmatter.title}</h3>
+                    <div dangerouslySetInnerHTML={{ __html: node.childMarkdownRemark.html }} />
+                    <h5>{node.childMarkdownRemark.frontmatter.description}</h5>
+                  </div>
+                
               )
             })}
           </div>
