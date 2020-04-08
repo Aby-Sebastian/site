@@ -6,4 +6,7 @@ image:
   image: img/abclogo.png
   alt: abc logo
 link: 'https://www.w3.org/Consortium/siteindex'
+tags:
+  - vid
+  - video
 ---

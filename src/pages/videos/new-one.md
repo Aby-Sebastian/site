@@ -5,5 +5,8 @@ description: lorem ipsum
 image:
   image: img/abclogo.png
   alt: abc logo
+tags:
+  - vid
+  - video
 ---
 `youtube: https://www.youtube.com/watch?v=VFrKjhcTAzE`
