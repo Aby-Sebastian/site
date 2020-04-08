@@ -21,6 +21,10 @@ module.exports = {
         link: "/articles",
       },
       {
+        name: "Video",
+        link: "/vid",
+      },
+      {
         name: "News",
         link: "/research",
       },
@@ -45,10 +49,7 @@ module.exports = {
         name: "Search",
         link: "/search",
       },
-      {
-        name: "Video",
-        link: "/vid",
-      }
+      
     ],
   },
   plugins: [

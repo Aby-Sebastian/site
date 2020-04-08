@@ -23,7 +23,7 @@ class BlogIndex extends React.Component {
               
               return (
                 
-                  <div className="card-article col-md-6">
+                  <div className="card-article col-md-6 margi">
                     <h3>{node.childMarkdownRemark.frontmatter.title}</h3>
                     <div dangerouslySetInnerHTML={{ __html: node.childMarkdownRemark.html }} />
                     <h5>{node.childMarkdownRemark.frontmatter.description}</h5>
