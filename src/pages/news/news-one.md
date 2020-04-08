@@ -9,4 +9,7 @@ link: 'https://www.w3.org/Consortium/siteindex'
 tags:
   - vid
   - video
+keywords:
+  - vid
+  - video
 ---

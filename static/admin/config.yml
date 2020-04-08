@@ -58,6 +58,9 @@ collections:
       - label: "Tags"
         name: "tags"
         widget: "list"
+      - label: "Keywords"
+        name: "keywords"
+        widget: "list"
 
   - name: "news"
     label: "News"
@@ -80,6 +83,9 @@ collections:
       - { label: "Link", name: "link", widget: "string" }
       - label: "Tags"
         name: "tags"
+        widget: "list"
+      - label: "Keywords"
+        name: "keywords"
         widget: "list"
 
   - name: "glossary"
@@ -104,6 +110,9 @@ collections:
       - { label: "Link", name: "link", widget: "string" }
       - label: "Tags"
         name: "tags"
+        widget: "list"
+      - label: "Keywords"
+        name: "keywords"
         widget: "list"
 
   - name: "pages"

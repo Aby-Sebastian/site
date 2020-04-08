@@ -8,5 +8,8 @@ image:
 tags:
   - vid
   - video
+keywords:
+  - vid
+  - video
 ---
 `youtube: https://www.youtube.com/watch?v=VFrKjhcTAzE`
