@@ -29,8 +29,8 @@ module.exports = {
         link: "/research",
       },
       {
-        name: "Resource",
-        link: "/resource",
+        name: "Glossary",
+        link: "/glossary",
       },
       {
         // name: "About Us",
