@@ -19,47 +19,48 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      allFile(filter: {relativeDirectory: {eq: "articles"}}, sort: {order: DESC, fields: childMarkdownRemark___frontmatter___date}) {
         edges {
           node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              tags
+            childMarkdownRemark {
+              fields {
+                slug
+              }
+              id
+              frontmatter {
+                title
+                tags
+              }
             }
           }
         }
-      }
-      tagsGroup: allMarkdownRemark(limit: 2000) {
-        group(field: frontmatter___tags) {
+        group(field: childMarkdownRemark___frontmatter___tags) {
           fieldValue
         }
       }
     }
+
   `)
 
-  const posts = result.data.allMarkdownRemark.edges
+  const posts = result.data.allFile.edges
 
   //create blog posts page
   posts.forEach(({ node }, index) => {
-    const id = node.id
+    const id = node.childMarkdownRemark.id
     createPage({
-      path: node.fields.slug,
+      path: node.childMarkdownRemark.fields.slug,
       component: path.resolve(`./src/templates/blog-post.js`),
       context: {
         prev: index === 0 ? null : posts[index - 1].node,
         next: index === posts.length - 1 ? null : posts[index + 1].node,
-        title: node.frontmatter.title,
-        slug: node.fields.slug,
+        title: node.childMarkdownRemark.frontmatter.title,
+        slug: node.childMarkdownRemark.fields.slug,
         id,
       },
     })
   })
   //extract data from query
-  const tags = result.data.tagsGroup.group
+  const tags = result.data.allFile.group
   //make tag pages
   tags.forEach(tag => {
     createPage({
