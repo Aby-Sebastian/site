@@ -10,14 +10,14 @@ export default function Template({ data, pageContext }) {
   const baseUrl = "https://infallible-cori-68e745.netlify.com"
   const prev = pageContext.prev //from here
     ? {
-        url: `${pageContext.prev.fields.slug}`,
-        title: pageContext.prev.frontmatter.title,
+        url: `${pageContext.prev.childMarkdownRemark.fields.slug}`,
+        title: pageContext.prev.childMarkdownRemark.frontmatter.title,
       }
     : null
   const next = pageContext.next
     ? {
-        url: `${pageContext.next.fields.slug}`,
-        title: pageContext.next.frontmatter.title,
+        url: `${pageContext.next.childMarkdownRemark.fields.slug}`,
+        title: pageContext.next.childMarkdownRemark.frontmatter.title,
       }
     : null //above code creates next and previous nav links
   return (
