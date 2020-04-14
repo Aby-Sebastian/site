@@ -5,7 +5,7 @@ import { kebabCase } from "lodash"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
-export default function Template({ data, pageContext }) {
+export const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const baseUrl = "https://infallible-cori-68e745.netlify.com"
   const prev = pageContext.prev //from here
@@ -133,6 +133,8 @@ export default function Template({ data, pageContext }) {
     </Layout>
   )
 }
+
+export default BlogPostTemplate
 
 export const postQuery = graphql`
   query BlogPostByPath($id: String!) {

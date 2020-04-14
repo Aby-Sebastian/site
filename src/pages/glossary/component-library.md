@@ -1,9 +1,7 @@
 ---
 title: Component Library
 date: 2020-04-08T20:00:01.740Z
-image:
-  image: img/abclogo.png
-  alt: abc logo
+
 link: 'https://www.smashingmagazine.com/2018/07/pattern-library-first-css/'
 tags:
   - css
