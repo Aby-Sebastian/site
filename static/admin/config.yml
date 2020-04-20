@@ -35,6 +35,35 @@ collections:
         widget: "list"
       - { label: "Body", name: "body", widget: "markdown" }
 
+  - name: "blog"
+    label: "Articles"
+    folder: "src/pages/articles"
+    create: true
+    slug: "{{title}}"
+    preview_path: articles/{{title}}
+    editor:
+      preview: false
+    fields:
+      - { label: "Author", name: "author", widget: "string", default: "aby" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - label: "SEO Keywords"
+        name: "keywords"
+        widget: "list"
+      - label: Featured Image
+        name: image
+        widget: object
+        fields:
+          - { label: Image, name: image, widget: image }
+          - { label: Alt, name: alt, widget: string }
+      - {label: "Company Name", name: "company", widget: "string"}
+      - {label: "Article Link", name: "Article-link", widget: "string"}
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+
   - name: "videos"
     label: "Videos"
     folder: "src/pages/videos"
