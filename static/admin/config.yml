@@ -15,7 +15,7 @@ collections:
     slug: "{{title}}"
     preview_path: articles/{{title}}
     editor:
-      preview: true
+      preview: false
     fields:
       - { label: "Author", name: "author", widget: "string", default: "aby" }
       - { label: "Title", name: "title", widget: "string" }
