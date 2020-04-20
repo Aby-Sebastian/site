@@ -35,7 +35,7 @@ collections:
         widget: "list"
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "blog"
+  - name: "external-blog"
     label: "Articles-External"
     folder: "src/pages/articles"
     create: true
