@@ -57,11 +57,11 @@ class BlogIndex extends React.Component {
           <div className="new-view row">
             {change.map(({ node }) => {
               return (
-                <div className="card-article col-md-3" key={node.fields.slug}>
-                  <Link to={node.fields.slug}>
-                    <h3>{node.frontmatter.title}</h3>
+                <div className="card-article col-md-3" key={node.childMarkdownRemark.fields.slug}>
+                  <Link to={node.childMarkdownRemark.fields.slug}>
+                    <h3>{node.childMarkdownRemark.frontmatter.title}</h3>
                   </Link>
-                  <p>{node.excerpt}</p>
+                  <p>{node.childMarkdownRemark.excerpt}</p>
                 </div>
               )
             })}
@@ -107,20 +107,23 @@ export const pageQuery = graphql`
         }
       }
     }
-    su: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+    su: allFile(
+      filter: {relativeDirectory: {eq: "articles"}}, 
+      sort: { fields: [childMarkdownRemark___frontmatter___date], order: DESC }
       skip: 5
     ) {
       edges {
         node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
+          childMarkdownRemark {
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              title
+              description
+            }
           }
         }
       }
