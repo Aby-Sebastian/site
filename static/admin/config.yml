@@ -37,7 +37,7 @@ collections:
 
   - name: "external-blog"
     label: "Articles-External"
-    folder: "src/pages/articles"
+    folder: "src/pages/articles/external-blog"
     create: true
     slug: "{{title}}"
     preview_path: articles/{{title}}
